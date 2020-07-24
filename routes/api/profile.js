@@ -47,5 +47,37 @@ router.post(
             return res.status(400).json({errors: errors.array()});
         }
 
-})
+        const {
+            company,
+            website,
+            location,
+            bio,
+            status,
+            githubusername,
+            skills,
+            youtube,
+            facebook,
+            twitter,
+            instagram,
+            linkedin
+        } = req.body;
+
+        // Build profile object
+        const profileFields = {};
+        profileFields.user = req.user.id;
+        if(company) profilesFields.company = company;
+        if(website) profilesFields.website = website;
+        if(location) profilesFields.location = location;
+        if(bio) profilesFields.bio = bio;
+        if(status) profilesFields.status = status;
+        if(githubusername) profilesFields.githubusername = githubusername;
+        if(skills) {
+            profileFields.skills = skills.split(',').map(skill => skill.trim());
+        }
+
+        console.log(skills);
+
+        res.send('Hello');
+    }
+);
 module.exports = router;
