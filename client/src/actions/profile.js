@@ -217,8 +217,6 @@ export const deleteEducation = id => async dispatch => {
             type: PROFILE_ERROR,
             payload: { msg: err.response.statusText, status: err.response.status }
         });
-
-
     }
 }
 
@@ -243,6 +241,5 @@ export const deleteAccount = () => async dispatch => {
                 payload: { msg: err.response.statusText, status: err.response.status }
             });
         }
-
     }
 }
