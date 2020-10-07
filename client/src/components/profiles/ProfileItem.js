@@ -27,7 +27,7 @@ const ProfileItem = ({ profile: {
                     </li>
                 ))}
             </ul>
-        </div>;
+        </div>
     )
 };
 

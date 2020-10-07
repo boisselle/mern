@@ -11,7 +11,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading }}) => {
     }, []);
 
     return <Fragment>
-        { loading ? <Spinner /> : <Frament>
+        { loading ? <Spinner /> : <Fragment>
             <h1 className="large text-primary">Developers</h1>
             <p className="lead">
                 <i className="fab fa-connectdevelop"></i> Browse and connect with develoeprs
@@ -23,8 +23,8 @@ const Profiles = ({ getProfiles, profile: { profiles, loading }}) => {
                     ))
                 ) : <h4> No profiles found... </h4> }
             </div>
-            </Frament>}
-    </Fragment>
+           </Fragment> }   
+    </Fragment>;
 };
 
 Profiles.propTypes = {
