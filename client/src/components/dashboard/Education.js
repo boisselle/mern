@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { deleteEducation } from '../../actions/profile';
-import { del } from 'request';
 
 const Education = ({ education, deleteEducation }) => {
     const educations = education.map(edu => (
@@ -40,11 +39,11 @@ const Education = ({ education, deleteEducation }) => {
                         <th />
                     </tr>
                 </thead>
-    <tbody>{educations}</tbody>
+                <tbody>{educations}</tbody>
             </table>
         </Fragment>
-    )
-}
+    );
+};
 
 Education.propTypes = {
     education: PropTypes.array.isRequired,
