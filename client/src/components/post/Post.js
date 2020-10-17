@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import PostItem from '../posts/PostItem';
-import CommentForm from '../posts/CommentForm';
-import CommentItem from '../posts/CommentItem';
+import CommentForm from '../post/CommentForm';
+import CommentItem from '../post/CommentItem';
 import { getPost } from '../../actions/post';
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
@@ -27,8 +27,9 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     </Fragment>
 };
 
-post.propTypes = {
-    getPost: PropTypes.func.isRequired
+Post.propTypes = {
+    getPost: PropTypes.func.isRequired,
+    post: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({

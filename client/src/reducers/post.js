@@ -42,7 +42,7 @@ export default function(state = initialState, action) {
         case DELETE_POST:
             return {
                 ...state,
-                posts: state.posts.filter(post._id !== payload),
+                posts: state.posts.filter(post => post._id !== payload),
                 loading: false
             };
         case POST_ERROR:
@@ -71,7 +71,6 @@ export default function(state = initialState, action) {
                     comments: state.post.comments.filter(comment => comment._id !== payload)
                 },
                 loading: false
-
             }
         default:
             return state;
